@@ -1,0 +1,84 @@
+body {
+  max-width: 600px;
+  margin: 16px 25px;
+  padding: 30px 20px 30px 50px;
+  border: 1.2px solid #bbe1f0;
+  border-radius: 5px;
+}
+html {
+  display: flex;
+  justify-content: center;
+}
+
+html,
+body {
+  margin-top: 40px;
+}
+.loupe {
+  margin-bottom: 10px;
+}
+.loupe:hover {
+  cursor: pointer;
+}
+.temperatureactuelle {
+  font-size: 30px;
+  text-align: center;
+}
+.degrees {
+  font-size: 10px;
+}
+.emot {
+  font-size: 40px;
+  text-align: center;
+}
+.col-1 {
+  font-size: 20px;
+  padding: 5px 2px;
+}
+.col-2 {
+  border: 0.5px solid #bbe1f0;
+  margin: 2px;
+  padding: auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.jour {
+  font-weight: bold;
+}
+.emoji {
+  font-size: 30px;
+}
+.temperature {
+  font-size: 11px;
+}
+
+.notes {
+  border-left: 1px solid rgb(255, 200, 0);
+  height: 70%;
+  position: relative;
+  right: 10px;
+  padding: 10px 10px 20px 10px;
+  font-size: 14px;
+  color: rgb(146, 141, 141);
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 20px;
+}
+
+.jourheure {
+  font-weight: lighter;
+  font-size: 23px;
+}
+
+.ville {
+  font-weight: bolder;
+  font-size: 23px;
+  text-transform: capitalize;
+}
+
+.villejourheure {
+  margin-bottom: 20px;
+}

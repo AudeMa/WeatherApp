@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+   
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Edu+NSW+ACT+Foundation:wght@400;500;600;700&family=Edu+TAS+Beginner:wght@700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,200;1,300;1,400&display=swap" rel="stylesheet">
+
+
+    <script
+      src="https://kit.fontawesome.com/6532b11dfb.js"
+      crossorigin="anonymous"
+    ></script>
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container"></div>
+<div class="row">
+  <div class="col-9"> 
+    <form id="search-form">
+    <input type="search" class="form-control shadow-sm" 
+    autofocus="on"
+    placeholder="Enter a city" id="search-input"/>
+   <input type="submit" value="Search" />
+   <button id="current-location" >Current</button>
+    </form>
+  </div>
+  
+    </div>
+
+ <div class="row villejourheure">
+      <div class="col-6">
+       <h2 class="ville" id="city">Amsterdam</h2>
+      </div>
+      <div class="col-6">
+       <h2 class="jourheure">Sun 18:00</h2> 
+      </div>
+      </div>
+
+
+    <div class="row">
+      <div class="col-6">
+      <div id="description">Partially cloudy</div>
+      <span class="emot">    🌤         </span>
+       <span class="temperatureactuelle" id="temperature">   24 </span> <a class="degrees" href="#" id="celsius-link">°C   </a>  |  <a class="degrees" href="#" id="fahrenheit-link"> °F</a>
+        
+      </div>
+      <div class="col-6" >
+          <div class="notes">
+        Humidity: <span id="humidity">54</span>%<br />
+        Wind: <span id="wind">19</span> km/h </div>
+      </div>
+      </div>
+
+      <div class="row">
+        <div class="col-2">
+          <div class="jour">Mon</div>
+          <div class="emoji">☀️</div>
+          <div class="temperature"><strong>23°</strong> 10°</div>
+        </div>
+        <div class="col-2">
+          <div class="jour">Tue</div>
+          <div class="emoji">🌥</div>
+          <div class="temperature"><strong>20°</strong> 12°</div>
+        </div>
+        <div class="col-2">
+          <div class="jour">Wed</div>
+          <div class="emoji">🌤</div>
+          <div class="temperature"><strong>24°</strong> 15°</div>
+        </div>
+        <div class="col-2">
+          <div class="jour">Thu</div>
+          <div class="emoji">☀️</div>
+          <div class="temperature"><strong>20°</strong> 16°</div>
+        </div>
+        <div class="col-2">
+          <div class="jour">Fri</div>
+          <div class="emoji">⛈</div>
+          <div class="temperature"><strong>19°</strong> 10°</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="src/index.js"></script>
+
+  </body>
+</html>
