@@ -28,21 +28,27 @@
   </head>
   <body>
     <div class="container"></div>
-    <div class="row">
-      <div class="col-9">
-        <form id="search-form">
-          <input
-            type="search"
-            class="form-control shadow-sm"
-            autofocus="on"
-            placeholder="Enter a city"
-            id="search-input"
-          />
-          <input type="submit" value="Search" />
-          <button id="current-location">Current</button>
-        </form>
+
+    <form id="search-form" class="mb-3">
+       <div class="row">
+      <div class="col-6">
+      <input
+        type="search"
+        class="form-control shadow-sm"
+        autofocus="on"
+        placeholder="Enter a city"
+        id="search-input"
+      />
       </div>
+      <div class="col-3">
+      <input type="submit" value="Search" class="btn btn-primary w-100"/>
+     </div>
+     <div class="col-3">
+      <button id="current-location" class="btn btn-primary w-100">Current</button>
     </div>
+    </form>
+  </div>
+</div>
 
     <div class="row villejourheure">
       <div class="col-6">
