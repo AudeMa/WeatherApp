@@ -26,8 +26,31 @@ jourh.innerHTML = `${day} ${hour}:${minutes}`;
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = "forecast";
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+       <div class="jour">${day}</div>
+      <img src="http://openweathermap.org/img/wn/50d@2x.png"
+               alt="emoji"
+                width="42"
+        />
+        <div class="temp">
+            <span class="temp-max"> 18°</span>
+            <span class="temp-min"> 12° </span>
+        </div>
+    </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
+
+displayForecast();
 
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -54,8 +77,8 @@ function displayWeather(response) {
 }
 
 function search(city) {
-  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c95d60a1e3adbeb286133f1ebebc2579&units=metric`;
+  let apiKey = "96ad27349a64ea1dcdfbe6f4d458c085";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=96ad27349a64ea1dcdfbe6f4d458c085&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -90,8 +113,8 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 function searchLocation(position) {
-  let apiKey = "c95d60a1e3adbeb286133f1ebebc2579";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=c95d60a1e3adbeb286133f1ebebc2579&units=metric`;
+  let apiKey = "96ad27349a64ea1dcdfbe6f4d458c085";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=96ad27349a64ea1dcdfbe6f4d458c085&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -103,4 +126,3 @@ let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", displayCurrentLocation);
 
 search("Amsterdam");
-displayForecast();
