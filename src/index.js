@@ -24,6 +24,11 @@ if (minutes < 10) {
 let jourh = document.querySelector(".jourheure");
 jourh.innerHTML = `${day} ${hour}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = "forecast";
+}
+
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -43,6 +48,9 @@ function displayWeather(response) {
       "src",
       `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     );
+  document
+    .querySelector("#icon")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 
 function search(city) {
@@ -95,3 +103,4 @@ let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", displayCurrentLocation);
 
 search("Amsterdam");
+displayForecast();
