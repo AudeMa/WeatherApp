@@ -2,7 +2,7 @@ body {
   max-width: 600px;
   margin: 16px auto;
   padding: 30px 20px 30px 50px;
-  border: 1.2px solid black;
+  border: 1.2px solid #bbe1f0;
   border-radius: 5px;
 }
 html {
