@@ -18,7 +18,7 @@ if (hour < 10) {
 
 let minutes = now.getMinutes();
 if (minutes < 10) {
-  minutes = `0${getMinutes}`;
+  minutes = `0${minutes}`;
 }
 
 let jourh = document.querySelector(".jourheure");
@@ -53,12 +53,11 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  let apiKey = "b1a8336ff1e05b64da5625e4158fbea3";
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
 
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&exclude={part}&appid=1a8336ff1e05b64da5625e4158fbea3&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${position.lat}&lon=${position.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
-displayForecast();
 
 function displayWeather(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -124,8 +123,7 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 function searchLocation(position) {
   let apiKey = "96ad27349a64ea1dcdfbe6f4d458c085";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=96ad27349a64ea1dcdfbe6f4d458c085&units=metric`;
-  axios.get(apiUrl).then(displayWeather);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
 }
 
 function displayCurrentLocation(event) {
