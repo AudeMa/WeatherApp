@@ -17,16 +17,16 @@ body {
 }
 
 .temperatureactuelle {
-  font-size: 30px;
+  font-size: 27px;
   text-align: center;
 }
 .degrees {
-  font-size: 10px;
+  font-size: 9px;
   position: relative;
   bottom: 10px;
 }
 .slash {
-  font-size: 10px;
+  font-size: 8px;
   position: relative;
   bottom: 10px;
 }
