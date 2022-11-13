@@ -27,6 +27,8 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
+    <div class="app">
+
     <div class="container"></div>
 
     <form id="search-form" class="mb-3">
@@ -47,9 +49,9 @@
       <button id="current-location" class="btn btn-primary w-100">Current</button>
     </div>
     </form>
-  </div>
+  
 </div>
-
+</br>
     <div class="row villejourheure">
       <div class="col-6">
         <h2 class="ville" id="city">Amsterdam</h2>
@@ -70,10 +72,16 @@
           />
         </span>
         <span class="temperatureactuelle" id="temperature"> 24 </span>
-        <a class="degrees" href="#" id="celsius-link">°C </a> |
+   
+      <a class="degrees" href="#" id="celsius-link">°C </a>    <span class="slash">|</span>
         <a class="degrees" href="#" id="fahrenheit-link"> °F</a>
+     
+      </br>
+ </br>
       </div>
       <div class="col-6">
+        </br>
+        </br>
         <div class="notes">
           Humidity: <span id="humidity">54</span>%<br />
           Wind: <span id="wind">19</span> km/h
@@ -81,7 +89,11 @@
       </div>
     </div>
     <div class="weather-forecast" id="forecast"></div>
+    </div>
     <script src="src/index.js"></script>
+  </div>
   </body>
-  <a href="https://github.com/AudeMa/WeatherApp">Open-source code</a> by Aude Massé
-</html>
+  <span class="source">   
+    <a  href="https://github.com/AudeMa/WeatherApp">Open-source code</a> by Aude Massé
+</span>
+    </html>
