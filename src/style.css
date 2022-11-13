@@ -54,7 +54,7 @@ body {
 }
 
 .notes {
-  border-left: 1px solid rgb(255, 200, 0);
+  border-left: 1px solid #ec6e4c;
   height: 70%;
   position: relative;
   right: 10px;
