@@ -144,7 +144,7 @@ function searchLocation(position) {
 
 function displayCurrentLocation(event) {
   event.preventDefault();
-  navigator.geolocation.displayCurrentLocation(searchLocation);
+  navigator.geolocation.getCurrentPosition(searchLocation);
 }
 let currentLocation = document.querySelector("#current-location");
 currentLocation.addEventListener("click", displayCurrentLocation);
